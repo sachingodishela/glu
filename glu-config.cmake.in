@@ -1,0 +1,14 @@
+# @PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# The following line will set the `GLU_FOUND` variable to TRUE.
+include("${CMAKE_CURRENT_LIST_DIR}/GLUTargets.cmake")
+
+# Define the include directories for your package
+set(GLU_INCLUDE_DIRS "@GLU_INCLUDE_DIRS@")
+set(GLU_LIBRARIES "@GLU_LIBRARIES@")
+
+# Provide variables for other packages to use
+set(GLU_INCLUDE_DIRS ${GLU_INCLUDE_DIRS} PARENT_SCOPE)
+set(GLU_LIBRARIES ${GLU_LIBRARIES} PARENT_SCOPE)
